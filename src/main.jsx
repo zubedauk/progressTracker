@@ -73,7 +73,7 @@ return(
           
            <div id="nav-search">
                 <nav class="nav navbar-light bg-light" id="nav">
-                    <a href="www.google.com" class="btn btn-outline-success btnSize">Student/</a>a>
+                    <a href="www.google.com" class="btn btn-outline-success btnSize">Student</a>
                     <a href="www.google.com" class="btn btn-outline-success btnSize">Attendance</a>
                     <a href="www.google.com" class="btn btn-outline-success btnSize">Education</a>
                     <a href="www.google.com" class="btn btn-outline-success btnSize">PD</a>
