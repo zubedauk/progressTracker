@@ -82,7 +82,7 @@ return(
                <div  id="search">
                {/* class="nav-item active" */}
                     <li >
-                        <a class="nav-link" href="#" id="home">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="www.google.com" id="home">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                     <select name="location" id="location">
