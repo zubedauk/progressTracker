@@ -7,6 +7,7 @@ function main(){
         <Header />
         <hr></hr>
         <Main />
+        <hr></hr>
         <Footer />
         </div>
     )
@@ -29,14 +30,15 @@ return(
   <caption>List of users</caption>
   <thead>
     <tr>
-      <th scope="col">#</th>
-      <th scope="col" >Name</th>
-      <th scope="col">Photo</th>
-      <th scope="col">GitHub</th>
-      <th scope="col">Edu Buddy</th>
-      <th scope="col">PD Buddy</th>
-      <th scope="col">English Test</th>
-      <th scope="col">Language Support</th>
+      <th scope="col" style={{fontSize:'1.2rem'}}>#</th>
+      <th scope="col" style={{fontSize:'1.2rem'}} >Name</th>
+      <th scope="col" style={{fontSize:'1.2rem'}}>Photo</th>
+      <th scope="col" style={{fontSize:'1.2rem'}}>Edu Buddy</th>
+      <th scope="col" style={{fontSize:'1.2rem'}}>PD Buddy</th>
+      <th scope="col" style={{fontSize:'1.2rem'}}>GitHub</th>
+      <th scope="col" style={{fontSize:'1.2rem'}}>English Test</th>
+      <th scope="col" style={{fontSize:'1.2rem'}}>Language Support</th>
+      <th scope="col"></th>
     </tr>
   </thead>
   <tbody>
@@ -46,13 +48,19 @@ return(
         return(<>
             <tr>
             <th scope="row">{obj.id}</th>
-            <td>{obj.name}</td>
-            <td>{obj.photo}</td>
-            <td>{obj.pdBuddy}</td>
-            <td>{obj.eduBuddy}</td>
-            <td>{obj.name}</td>
-            <td>{obj.englishTest}</td>
-            <td>{obj.languageSupport}</td>
+                <td style={{fontSize:'1.2rem'}}>{obj.name}</td>
+                <td style={{fontSize:'1.2rem'}}>{obj.photo}</td>
+                <td style={{fontSize:'1.2rem'}}>{obj.pdBuddy}</td>
+                <td>{obj.eduBuddy}</td>
+                <td style={{fontSize:'1.2rem'}}>{obj.gitHub}</td>
+                <td style={{fontSize:'1.2rem'}}>{obj.englishTest}</td>
+                <td style={{fontSize:'1.2rem'}}>{obj.languageSupport}</td>
+                <td>
+                <form class="form-inline my-2 my-lg-0" name="frmProfile">
+                    <button style={{fontSize:'1.2rem'}} class="btn btn-outline-success my-2 my-sm-0" type="submit" id="btnProfile">Profile</button>
+                </form>
+                </td>
+
             </tr>
             </>)
     })
@@ -77,6 +85,7 @@ return(
                     <a href="www.google.com" class="btn btn-outline-success btnSize">Attendance</a>
                     <a href="www.google.com" class="btn btn-outline-success btnSize">Education</a>
                     <a href="www.google.com" class="btn btn-outline-success btnSize">PD</a>
+             
                 </nav>
                 
                <div  id="search">
@@ -103,7 +112,7 @@ return(
                     </select>
                     </li>
                     <li>
-                        <form class="form-inline my-2 my-lg-0">
+                        <form class="form-inline my-2 my-lg-0" name="frmSearch">
                             <input style={{fontSize:'1.4rem',width:'10rem'}} class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
                             <button style={{fontSize:'1.4rem'}} class="btn btn-outline-success my-2 my-sm-0" type="submit" id="btnSearch">Search</button>
                         </form>

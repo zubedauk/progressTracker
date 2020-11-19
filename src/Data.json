@@ -1,33 +1,33 @@
 [
     {
         "id":0,
-        "name":"zubeda",
+        "name":"Patrick Chan",
         "photo":"yes",
-        "gitHub":"zubedauk",
-        "pdBuddy":"Shukrii",
+        "pdBuddy":"Amardeep",
         "eduBuddy":"Nadir",
+        "gitHub":"pchan2",
         "englishTest":"good",
         "languageSupport":"yes"
 
     },
     {
         "id":1,
-        "name":"Hadiya",
+        "name":"Daniel Carter",
         "photo":"yes",
-        "gitHub":"Hadiyauk",
-        "pdBuddy":"Shukrii",
-        "eduBuddy":"Nadir",
+        "pdBuddy":"Jude",
+        "eduBuddy":"Dharmesh Chohan",
+        "gitHub":"Daniel",
         "englishTest":"good",
         "languageSupport":"yes"
 
     },
     {
         "id":2,
-        "name":"AISHA",
+        "name":"Ebenezer Sam",
         "photo":"yes",
-        "gitHub":"Hadiyauk",
-        "pdBuddy":"Shukrii",
+        "pdBuddy":"Leary",
         "eduBuddy":"Nadir",
+        "gitHub":"Samuk",
         "englishTest":"good",
         "languageSupport":"yes"
 
@@ -36,77 +36,45 @@
         "id":3,
         "name":"Clair",
         "photo":"yes",
-        "gitHub":"Hadiyauk",
-        "pdBuddy":"Shukrii",
+        "pdBuddy":"Salina",
         "eduBuddy":"Nadir",
+        "gitHub":"Clairuk",
         "englishTest":"good",
         "languageSupport":"yes"
 
     },
     {
         "id":4,
-        "name":"Hibba",
+        "name":"Berhane Woldetensay",
         "photo":"yes",
-        "gitHub":"Hadiyauk",
-        "pdBuddy":"Shukrii",
-        "eduBuddy":"Nadir",
+        "pdBuddy":"Salina",
+        "eduBuddy":"Jude",
+        "gitHub":"Woldetensayuk",
         "englishTest":"good",
         "languageSupport":"yes"
 
     },
     {
         "id":5,
-        "name":"Salina",
+        "name":"Leory",
         "photo":"yes",
-        "gitHub":"Hadiyauk",
-        "pdBuddy":"Shukrii",
-        "eduBuddy":"Nadir",
+        "pdBuddy":"Wahab",
+        "eduBuddy":"Jude",
+        "gitHub":"Leory",
         "englishTest":"good",
         "languageSupport":"yes"
 
     },
     {
         "id":6,
-        "name":"Nosayba",
+        "name":"Zubeda",
         "photo":"yes",
-        "gitHub":"Hadiyauk",
-        "pdBuddy":"Shukrii",
-        "eduBuddy":"Nadir",
-        "englishTest":"good",
-        "languageSupport":"yes"
-
-    },
-    {
-        "id":7,
-        "name":"Nosayba",
-        "photo":"yes",
-        "gitHub":"Hadiyauk",
-        "pdBuddy":"Shukrii",
-        "eduBuddy":"Nadir",
-        "englishTest":"good",
-        "languageSupport":"yes"
-
-    },
-    {
-        "id":8,
-        "name":"Nosayba",
-        "photo":"yes",
-        "gitHub":"Hadiyauk",
-        "pdBuddy":"Shukrii",
-        "eduBuddy":"Nadir",
-        "englishTest":"good",
-        "languageSupport":"yes"
-
-    },
-    {
-        "id":9,
-        "name":"Nosayba",
-        "photo":"yes",
-        "gitHub":"Hadiyauk",
-        "pdBuddy":"Shukrii",
-        "eduBuddy":"Nadir",
-        "englishTest":"good",
+        "pdBuddy":"Nadir",
+        "eduBuddy":"Shukrii",
+        "gitHub":"zubedaUk",
+        "englishTest":"Average",
         "languageSupport":"yes"
 
     }
+   
 ]
