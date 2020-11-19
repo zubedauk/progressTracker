@@ -67,6 +67,17 @@
     },
     {
         "id":6,
+        "name":"Gennady Tabala",
+        "photo":"yes",
+        "pdBuddy":"Nadir",
+        "eduBuddy":"Chris",
+        "gitHub":"TabalaUk",
+        "englishTest":"Average",
+        "languageSupport":"yes"
+
+    },
+    {
+        "id":7,
         "name":"Zubeda",
         "photo":"yes",
         "pdBuddy":"Nadir",
