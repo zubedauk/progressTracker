@@ -1,0 +1,79 @@
+[
+    {
+        "id":0,
+        "name":"zubeda",
+        "photo":"yes",
+        "gitHub":"zubedauk",
+        "pdBuddy":"Shukrii",
+        "eduBuddy":"Nadir",
+        "englishTest":"good",
+        "languageSupport":"yes"
+
+    },
+    {
+        "id":1,
+        "name":"Hadiya",
+        "photo":"yes",
+        "gitHub":"Hadiyauk",
+        "pdBuddy":"Shukrii",
+        "eduBuddy":"Nadir",
+        "englishTest":"good",
+        "languageSupport":"yes"
+
+    },
+    {
+        "id":2,
+        "name":"AISHA",
+        "photo":"yes",
+        "gitHub":"Hadiyauk",
+        "pdBuddy":"Shukrii",
+        "eduBuddy":"Nadir",
+        "englishTest":"good",
+        "languageSupport":"yes"
+
+    },
+    {
+        "id":3,
+        "name":"Clair",
+        "photo":"yes",
+        "gitHub":"Hadiyauk",
+        "pdBuddy":"Shukrii",
+        "eduBuddy":"Nadir",
+        "englishTest":"good",
+        "languageSupport":"yes"
+
+    },
+    {
+        "id":4,
+        "name":"Hibba",
+        "photo":"yes",
+        "gitHub":"Hadiyauk",
+        "pdBuddy":"Shukrii",
+        "eduBuddy":"Nadir",
+        "englishTest":"good",
+        "languageSupport":"yes"
+
+    },
+    {
+        "id":5,
+        "name":"Salina",
+        "photo":"yes",
+        "gitHub":"Hadiyauk",
+        "pdBuddy":"Shukrii",
+        "eduBuddy":"Nadir",
+        "englishTest":"good",
+        "languageSupport":"yes"
+
+    },
+    {
+        "id":6,
+        "name":"Nosayba",
+        "photo":"yes",
+        "gitHub":"Hadiyauk",
+        "pdBuddy":"Shukrii",
+        "eduBuddy":"Nadir",
+        "englishTest":"good",
+        "languageSupport":"yes"
+
+    }
+]
