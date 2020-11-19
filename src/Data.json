@@ -75,5 +75,38 @@
         "englishTest":"good",
         "languageSupport":"yes"
 
+    },
+    {
+        "id":7,
+        "name":"Nosayba",
+        "photo":"yes",
+        "gitHub":"Hadiyauk",
+        "pdBuddy":"Shukrii",
+        "eduBuddy":"Nadir",
+        "englishTest":"good",
+        "languageSupport":"yes"
+
+    },
+    {
+        "id":8,
+        "name":"Nosayba",
+        "photo":"yes",
+        "gitHub":"Hadiyauk",
+        "pdBuddy":"Shukrii",
+        "eduBuddy":"Nadir",
+        "englishTest":"good",
+        "languageSupport":"yes"
+
+    },
+    {
+        "id":9,
+        "name":"Nosayba",
+        "photo":"yes",
+        "gitHub":"Hadiyauk",
+        "pdBuddy":"Shukrii",
+        "eduBuddy":"Nadir",
+        "englishTest":"good",
+        "languageSupport":"yes"
+
     }
 ]
