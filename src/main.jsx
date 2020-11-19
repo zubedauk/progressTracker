@@ -73,16 +73,16 @@ return(
           
            <div id="nav-search">
                 <nav class="nav navbar-light bg-light" id="nav">
-                    <a href="www.google.com" class="btn btn-outline-success btnSize">Student1</a>
-                    <a href="www.google.com" class="btn btn-outline-success btnSize">Student</a>
-                    <a href="www.google.com" class="btn btn-outline-success btnSize">Student</a>
-                    <a href="www.google.com" class="btn btn-outline-success btnSize">Student</a>
+                    <a href="www.google.com" class="btn btn-outline-success btnSize">Student/</a>a>
+                    <a href="www.google.com" class="btn btn-outline-success btnSize">Attendance</a>
+                    <a href="www.google.com" class="btn btn-outline-success btnSize">Education</a>
+                    <a href="www.google.com" class="btn btn-outline-success btnSize">PD</a>
                 </nav>
                 
                <div  id="search">
                {/* class="nav-item active" */}
                     <li >
-                        <a class="nav-link" href="www.google.com" id="home">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="www.google" id="home">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                     <select name="location" id="location">
