@@ -1,12 +1,14 @@
 import React from 'react'
 import Data from './Data.json'
 import './main.css'
+import StudentProfile from './component/StudentProfile'
 function main(){
     return(
         <div id="container">
         <Header />
         <hr></hr>
-        <Main />
+        {/* <Main /> */}
+        <StudentProfile />
         <hr></hr>
         <Footer />
         </div>
