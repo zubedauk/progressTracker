@@ -1,4 +1,5 @@
-import React, { useEffect,useState } from 'react'
+import React from 'react'
+// { useEffect,useState }
 
 function main(prop){
     return(
@@ -20,26 +21,26 @@ function Footer(){
     )
 }
 function Main(prop){
-const [data,setData]=useState([]);
-useEffect(
-    function(){
-        fetch('https://ontrack-team3.herokuapp.com/students')
-        .then(function(obj){
-            return obj.json();
-        })
-        .then(function(db){
-            console.log("zz");
-            console.log(db);
-            setData(db);
-            console.log(data);
-        })
-        .then(function(error) {
-            console.log(error);
-          });
-    }
+//const [data,setData]=useState([]);
+// useEffect(
+//     function(){
+//         fetch('https://ontrack-team3.herokuapp.com/students')
+//         .then(function(obj){
+//             return obj.json();
+//         })
+//         .then(function(db){
+//             console.log("zz");
+//             console.log(db);
+//             setData(db);
+//             console.log(data);
+//         })
+//         .then(function(error) {
+//             console.log(error);
+//           });
+//     }
     
-    
-)
+
+// )
 return(
 <main id="main">
 <form class="form-inline my-2 my-lg-0" id="frmAdd">
