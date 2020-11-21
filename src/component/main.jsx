@@ -33,7 +33,7 @@ useEffect(
             return obj.json();
         })
         .then(function(db){
-            console.log("zz");
+           
             console.log(db);
             setData(db);
             console.log(data);
