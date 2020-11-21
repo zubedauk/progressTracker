@@ -1,5 +1,4 @@
-import React from 'react'
-
+import React, { useEffect,useState } from 'react'
 
 function main(prop){
     return(
@@ -21,6 +20,24 @@ function Footer(){
     )
 }
 function Main(prop){
+const [data,setData]=useState([]);
+useEffect(
+    function(){
+        fetch('https://ontrack-team3.herokuapp.com/students')
+        .then(function(obj){
+            return obj.json();
+        })
+        .then(function(db){
+            console.log("zz");
+            console.log(db);
+            setData(db);
+        })
+        .then(function(error) {
+            console.log(error);
+          });
+    }
+    ,[]
+)
 return(
 <main id="main">
 <form class="form-inline my-2 my-lg-0" id="frmAdd">
@@ -81,7 +98,7 @@ return(
           
            <div id="nav-search">
                 <nav class="nav navbar-light bg-light" id="nav">
-                    <a href="www.google.com" class="btn btn-outline-success btnSize">Student</a>
+                    <a href="www.google.com" class="btn btn-outline-success btnSize">Students</a>
                     <a href="www.google.com" class="btn btn-outline-success btnSize">Attendance</a>
                     <a href="www.google.com" class="btn btn-outline-success btnSize">Education</a>
                     <a href="www.google.com" class="btn btn-outline-success btnSize">PD</a>
