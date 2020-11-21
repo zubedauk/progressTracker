@@ -3,14 +3,15 @@ import Main from './component/main'
 import ReactDOM from 'react-dom';
 import './index.css';
 import './main.css'
-import Data from './Data.json'
+
 
 // import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
+ 
   <React.StrictMode>
-    <Main db={Data}/>
+    <Main />
   </React.StrictMode>,
   document.getElementById('root')
 );

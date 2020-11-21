@@ -1,5 +1,5 @@
-import React from 'react'
-// { useEffect,useState }
+import React,{useEffect,useState} from 'react'
+// 
 
 function main(prop){
     return(
@@ -20,27 +20,31 @@ function Footer(){
     </footer>
     )
 }
-function Main(prop){
-//const [data,setData]=useState([]);
-// useEffect(
-//     function(){
-//         fetch('https://ontrack-team3.herokuapp.com/students')
-//         .then(function(obj){
-//             return obj.json();
-//         })
-//         .then(function(db){
-//             console.log("zz");
-//             console.log(db);
-//             setData(db);
-//             console.log(data);
-//         })
-//         .then(function(error) {
-//             console.log(error);
-//           });
-//     }
-    
+function Main(){
+const [data,setData]=useState([]);
+useEffect(
+    function(){
+        //https://zubeda-hotel-server.glitch.me/bookings/1
+       // https://ontrack-team3.herokuapp.com/students
+       //https://progresstracer.glitch.me/ProgressTracker/students
+       // https://ontrack-team3.herokuapp.com/students
+        fetch('https://ontrack-team3.herokuapp.com/students')
+        .then(function(obj){
+            return obj.json();
+        })
+        .then(function(db){
+            console.log("zz");
+            console.log(db);
+            setData(db);
+            console.log(data);
+        })
+        .then(function(error) {
+            console.log(error);
+          });
+    }
+   
 
-// )
+)
 return(
 <main id="main">
 <form class="form-inline my-2 my-lg-0" id="frmAdd">
@@ -64,7 +68,7 @@ return(
   <tbody>
    
     {
-   prop.Data.map(function(obj){
+   data.map(function(obj){
         return(<>
             <tr>
             <th scope="row">{obj.id}</th>
@@ -101,7 +105,7 @@ return(
           
            <div id="nav-search">
                 <nav class="nav navbar-light bg-light" id="nav">
-                    <a href="www.google.com" class="btn btn-outline-success btnSize">Students</a>
+                    <a href="www.google.com" class="btn btn-outline-success btnSize">Student</a>
                     <a href="www.google.com" class="btn btn-outline-success btnSize">Attendance</a>
                     <a href="www.google.com" class="btn btn-outline-success btnSize">Education</a>
                     <a href="www.google.com" class="btn btn-outline-success btnSize">PD</a>
