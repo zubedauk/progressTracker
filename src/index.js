@@ -1,14 +1,16 @@
 import React from 'react';
-import Main from './main'
+import Main from './component/main'
 import ReactDOM from 'react-dom';
 import './index.css';
+import './main.css'
+import Data from './Data.json'
 
 // import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Main />
+    <Main db={Data}/>
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -1,12 +1,12 @@
 import React from 'react'
-import Data from './Data.json'
-import './main.css'
-function main(){
+
+
+function main(prop){
     return(
         <div id="container">
         <Header />
         <hr></hr>
-        <Main />
+        <Main Data={prop.db} />
         <hr></hr>
         <Footer />
         </div>
@@ -20,7 +20,7 @@ function Footer(){
     </footer>
     )
 }
-function Main(){
+function Main(prop){
 return(
 <main id="main">
 <form class="form-inline my-2 my-lg-0" id="frmAdd">
@@ -44,7 +44,7 @@ return(
   <tbody>
    
     {
-   Data.map(function(obj){
+   prop.Data.map(function(obj){
         return(<>
             <tr>
             <th scope="row">{obj.id}</th>
