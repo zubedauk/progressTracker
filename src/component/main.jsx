@@ -212,6 +212,16 @@ function AddNew(prop){
             //https://progresstracker.glitch.me/students
             //
             fetch("https://ontrack-team3.herokuapp.com/students", requestPost)
+            var proceed = window.confirm("Saved:Press Ok if You like to add more or press Cancel to finish?");
+            if (proceed) {
+                setName("")
+                setEdu("");
+                setPD("") ;
+                setGitHub("");  
+                    
+            } else {
+               prop.addCancelFunc();
+            }
         }
     }
     //following method is used to send msg to component main to hide the this component
@@ -234,16 +244,16 @@ function AddNew(prop){
                     </thead>  
                     <tbody>
                     <tr>
-                        <td style={{fontSize:'1.2rem'}}><input style={{width:'20rem'}} placeholder="Enter Name" type="text" name="txtName" value={name} onChange={function(e){setName(e.target.value)}} /></td>
+                        <td style={{fontSize:'1.2rem'}}><input style={{width:'20rem'}} placeholder="Enter Name" type="text" name="txtName" id="txtName" value={name} onChange={function(e){setName(e.target.value)}} /></td>
                         <td style={{fontSize:'1.2rem'}}>
                             <select name="txtPhoto" onChange={function(e){setPhoto(e.target.value)}}>
                                 <option style={{fontSize:'1.2rem'}} value="yes">Yes</option>
                                 <option style={{fontSize:'1.2rem'}} value="No">No</option>
                             </select>                        
                         </td>
-                        <td style={{fontSize:'1.2rem'}}><input style={{width:'10rem'}} type="text" name="txtEdu" value={edu} onChange={function(e){setEdu(e.target.value)}} /></td>
-                        <td><input style={{width:'10rem'}} type="text" name="txtPD" value={pd} onChange={function(e){setPD(e.target.value)}} /></td>
-                        <td style={{fontSize:'1.2rem'}}><input type="text" name="txtGitHub" value={gitHub} onChange={function(e){setGitHub(e.target.value)}} /></td>
+                        <td style={{fontSize:'1.2rem'}}><input style={{width:'10rem'}} type="text" placeholder="Enter Edu Buddy" name="txtEdu" value={edu} onChange={function(e){setEdu(e.target.value)}} /></td>
+                        <td><input style={{width:'10rem'}} type="text" name="txtPD" value={pd} placeholder="Enter PD Buddy" onChange={function(e){setPD(e.target.value)}} /></td>
+                        <td style={{fontSize:'1.2rem'}}><input type="text" name="txtGitHub" placeholder="Enter GitHub ID" value={gitHub} onChange={function(e){setGitHub(e.target.value)}} /></td>
                         <td style={{fontSize:'1.2rem'}}>
                             <select name="selectEnglishTest" onChange={function(e){setEnglish(e.target.value)}} >
                                 <option style={{fontSize:'1.2rem'}} value="Excellent">Excellent</option>
