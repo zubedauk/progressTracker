@@ -2,6 +2,9 @@ import React from 'react'
 import Data from './Data.json'
 import './main.css'
 import StudentProfile from './component/StudentProfile'
+import "antd/dist/antd.css";
+import "./index.css";
+import ViewProfile from './component/ViewProfile';
 function main(){
     return(
         <div id="container">
@@ -9,6 +12,9 @@ function main(){
         <hr></hr>
         {/* <Main /> */}
         <StudentProfile />
+         <ViewProfile />
+      
+       
         <hr></hr>
         <Footer />
         </div>
