@@ -23,24 +23,13 @@
     height:7rem;
 
 }
-#btnSearch{
-
-}
 #login{
     width:6rem;
     height:3rem;
     font-size: medium;
     font-weight: bold;
 }
-#logo-login{
-    /* background: crimson; */
-    height:11rem;
-    width:18%;
-    display:flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-}
+
 #search li a:hover{
     
 }
@@ -124,6 +113,9 @@
     display:flex;
     flex-direction: column;
 
+}
+#newEntry{
+    box-shadow: 5px 5px 10px;
 }
 #frmAdd{
     width:100%;
