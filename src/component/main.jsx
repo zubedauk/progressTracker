@@ -194,10 +194,10 @@ function AddNew(prop){
             let student = {
                 name: name,
                 photo:photo,
-                edu:edu,
-                pd:pd,
+                eduBuddy:edu,
+                pdBuddy:pd,
                 gitHub:gitHub,
-                english:english,
+                englishTest:english,
                 languageSupport:languageSupport
             };
           
