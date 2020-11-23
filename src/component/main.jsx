@@ -214,9 +214,7 @@ function AddNew(prop){
         }
     }
     //following method is used to send msg to component main to hide the this component
-    function cancel(){
-        prop.addCancelFunc("cancel")
-    }
+   
     return(
         <div id="newEntry">
             <table class="table table-striped table-bordered" >
