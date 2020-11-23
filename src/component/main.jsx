@@ -121,6 +121,8 @@ return(
         <th scope="col" style={{fontSize:'1.2rem'}}>English Test</th>
         <th scope="col" style={{fontSize:'1.2rem'}}>Language Support</th>
         <th scope="col"></th>
+        <th scope="col"></th>
+        <th scope="col"></th>
         </tr>
     </thead>
     <tbody>
@@ -137,9 +139,13 @@ return(
                 <td style={{fontSize:'1.2rem'}}>{obj.englishTest}</td>
                 <td style={{fontSize:'1.2rem'}}>{obj.languageSupport}</td>
                 <td>
-                    <form class="form-inline my-2 my-lg-0" name="frmProfile">
-                        <button style={{fontSize:'1.2rem'}} class="btn btn-outline-success my-2 my-sm-0" type="submit" id="btnProfile">Profile</button>
-                    </form>
+                    <button style={{fontSize:'1.2rem'}} class="btn btn-outline-success my-2 my-sm-0" type="submit" id="btnProfile">Edit</button>
+                </td>
+                <td>
+                    <button style={{fontSize:'1.2rem',borderColor:'red'}} class="btn btn-outline-success my-2 my-sm-0" type="submit" id="btnProfile">X</button>
+                </td>
+                <td>
+                    <button style={{fontSize:'1.2rem'}} class="btn btn-outline-success my-2 my-sm-0" type="submit" id="btnProfile">Profile</button>
                 </td>
             </tr>
         </>)
