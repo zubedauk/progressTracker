@@ -10,16 +10,19 @@ function Container(){
     const [urlSearch,setURLSearch]=useState(null)
     //////////function to change ApI according to search cretria
     function urlFunc(urlSearch){
-        alert("empty main")
+        alert("coming"+urlSearch)
+        alert("empty and set="+urlSearch)
         document.getElementById("main").innerHTML=""
+        
         setURLSearch(urlSearch)
     }
+    
     return(
         <div id="container">
         <Header urlFunc={urlFunc} />
         <hr></hr>
-        {urlMain && (<Main url={urlMain}/>)}
-        {urlSearch && (<Main url={urlSearch}/>)}
+        {urlMain && (<Main url={urlMain} cnt={urlMain} />)}
+        {urlSearch && (<Main url={urlSearch} cnt={urlSearch}/>)}
         <hr></hr>
         <Footer />
         </div>
@@ -44,17 +47,27 @@ function Header(prop){
         // prop.urlFunc(query);
         /////////////////////////////////////
      
-       ///////////////////////gennady
+       ////////////////////////////////////////gennady
          //https://ontrack-team3.herokuapp.com/students
        ///students/search?location=&class=&term=zubeda
        let query;
-        if(searchLocation==null && searchClass==null && searchName!=null){
-            query=`https://ontrack-team3.herokuapp.com/students/search?location=&class=&term=${searchName}` 
+       if(searchLocation==="location" || isNaN(searchLocation)){
+           
+           setSearchLocation("")
+          
+       }
+       if(searchClass==="class"){
+           setSearchClass("")
+       }
+       if(searchName==""){
+           setSearchName("")
+       }
+       //2.search only by name
+         query=`https://ontrack-team3.herokuapp.com/students/search?location=${searchLocation}&class=${searchClass}&term=${searchName}` 
          
-        }
-        prop.urlFunc(query);
-       ////////////////////////////////
-       
+        
+        
+      prop.urlFunc(query);
 
     }
     return(
@@ -75,18 +88,18 @@ function Header(prop){
                         </li>
                         <li class="nav-item">
                         <select name="selectLocation" id="selectLocation" onChange={function(e){setSearchLocation(e.target.value)}}>
-                            <option value="London">Location</option>
+                            <option value="location">Location</option>
                             <option value="London">London</option>
                             <option value="Birmingham">Birmingham</option>
-                            <option value="Machester">Machester</option>
+                            <option value="Manchester">Manchester</option>
                         </select>
                         </li>
                         <li class="nav-item">
                         <select name="selectClass" id="selectClass" onChange={function(e){setSearchClass(e.target.value)}}>
-                            <option value="Class1">Class</option>
+                            <option value="">Class</option>
                             <option value="Class1">Class1</option>
                             <option value="Class2">Class2</option>
-                            <option value="Class3">Class3</option> 
+                            <option value="Class3">class5</option> 
                         </select>
                         </li>
                         <li>
@@ -116,6 +129,7 @@ function Main(prop){
     useEffect(
         function(){
         const url=prop.url;
+       
         fetch(url)
             .then(function(obj){
                 return obj.json();
@@ -130,7 +144,7 @@ function Main(prop){
                 console.log(error);
             });
         }
-    )
+    ,[prop.cnt])
 ////////////////////setAdd method is used to on/off the new entry div
 const [add,setAdd]=useState(null);
 function addCancelFunc(){
@@ -172,6 +186,7 @@ return(
     </thead>
     <tbody>
     {
+    
     data.map(function(obj){
         return(<>
             <tr>
