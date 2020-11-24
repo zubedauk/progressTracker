@@ -1,5 +1,5 @@
 import React from 'react';
-import Main from './main'
+import Main from './component/main'
 import ReactDOM from 'react-dom';
 import './index.css';
 
