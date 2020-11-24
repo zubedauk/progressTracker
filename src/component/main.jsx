@@ -1,19 +1,62 @@
 import React,{useEffect,useState} from 'react'
 // 
 
-function main(prop){
+function Container(){
+     //https://zubeda-hotel-server.glitch.me/bookings/1
+    // https://ontrack-team3.herokuapp.com/students
+    //https://progresstracer.glitch.me/students
+    // https://ontrack-team3.herokuapp.com/students
+    const [urlMain,setURLMin]=useState('https://ontrack-team3.herokuapp.com/students')
+    const [urlSearch,setURLSearch]=useState(null)
+    //////////function to change ApI according to search cretria
+    function urlFunc(urlSearch){
+        alert("empty main")
+        document.getElementById("main").innerHTML=""
+        setURLSearch(urlSearch)
+    }
     return(
         <div id="container">
-        <Header />
+        <Header urlFunc={urlFunc} />
         <hr></hr>
-        <Main Data={prop.db} />
+        {urlMain && (<Main url={urlMain}/>)}
+        {urlSearch && (<Main url={urlSearch}/>)}
         <hr></hr>
         <Footer />
         </div>
     )
 }
 /////////////////////////////////////////////component header
-function Header(){
+function Header(prop){
+ const [searchName,setSearchName]=useState(null);
+    const [searchLocation,setSearchLocation]=useState(null);
+    const [searchClass,setSearchClass]=useState(null);
+//////////////////this function is used for search against location class and terms(name,buddy)
+    function search(){
+        //////////////////////////////////////zubeda
+        
+        // let query;
+        // if(searchLocation==null && searchClass==null && searchName==null){
+        //     query='https://progresstracker.glitch.me/students/search'
+         
+        // }else if(){
+
+        // }
+        // prop.urlFunc(query);
+        /////////////////////////////////////
+     
+       ///////////////////////gennady
+         //https://ontrack-team3.herokuapp.com/students
+       ///students/search?location=&class=&term=zubeda
+       let query;
+        if(searchLocation==null && searchClass==null && searchName!=null){
+            query=`https://ontrack-team3.herokuapp.com/students/search?location=&class=&term=${searchName}` 
+         
+        }
+        prop.urlFunc(query);
+       ////////////////////////////////
+       
+
+    }
     return(
         <header id="header">
             <div id="logo">
@@ -31,7 +74,7 @@ function Header(){
                             <a class="nav-link" href="www.google" id="home">Home <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                        <select name="location" id="location">
+                        <select name="selectLocation" id="selectLocation" onChange={function(e){setSearchLocation(e.target.value)}}>
                             <option value="London">Location</option>
                             <option value="London">London</option>
                             <option value="Birmingham">Birmingham</option>
@@ -39,7 +82,7 @@ function Header(){
                         </select>
                         </li>
                         <li class="nav-item">
-                        <select name="class" id="class">
+                        <select name="selectClass" id="selectClass" onChange={function(e){setSearchClass(e.target.value)}}>
                             <option value="Class1">Class</option>
                             <option value="Class1">Class1</option>
                             <option value="Class2">Class2</option>
@@ -47,10 +90,14 @@ function Header(){
                         </select>
                         </li>
                         <li>
-                            <form class="form-inline my-2 my-lg-0" name="frmSearch">
-                                <input style={{fontSize:'1.4rem',width:'10rem'}} class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
-                                <button style={{fontSize:'1.4rem'}} class="btn btn-outline-success my-2 my-sm-0" type="submit" id="btnSearch">Search</button>
-                            </form>
+                            {/* <form class="form-inline my-2 my-lg-0" name="frmSearch"> */}
+                                <div style={{display:'flex'}}>
+
+                                    <input onChange={function(e){setSearchName(e.target.value)}} name="txtTerm" id="txtName" style={{fontSize:'1.4rem',width:'10rem'}} class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
+                                    <button style={{fontSize:'1.4rem'}} class="btn btn-outline-success my-2 my-sm-0"  id="btnSearch" onClick={search}>Search</button>
+                                </div>
+                                
+                            {/* </form> */}
                         </li>
                 </div>
             </div>   
@@ -60,18 +107,16 @@ function Header(){
         </header>
     )
     
-    }
+}
 /////////////////////////////////////////////component Main
-function Main(){
+function Main(prop){
     ////////////API to extract al  students records on main page load
+  
     const [data,setData]=useState([]);
     useEffect(
         function(){
-            //https://zubeda-hotel-server.glitch.me/bookings/1
-        // https://ontrack-team3.herokuapp.com/students
-        //https://progresstracer.glitch.me/students
-        // https://ontrack-team3.herokuapp.com/students
-            fetch('https://ontrack-team3.herokuapp.com/students')
+        const url=prop.url;
+        fetch(url)
             .then(function(obj){
                 return obj.json();
             })
@@ -208,9 +253,6 @@ function AddNew(prop){
                 },
                 body: JSON.stringify(student)
             };
-            //fetch('https://ontrack-team3.herokuapp.com/students')
-            //https://progresstracker.glitch.me/students
-            //
             fetch("https://ontrack-team3.herokuapp.com/students", requestPost)
             var proceed = window.confirm("Saved:Press Ok if You like to add more or press Cancel to finish?");
             if (proceed) {
@@ -269,6 +311,7 @@ function AddNew(prop){
                         </td>
                         <td>
                             {/* <form method="post" action="https://progresstracker.glitch.me/students" class="form-inline my-2 my-lg-0" name="frmProfile"> */}
+                                
                                 <button style={{fontSize:'1.2rem'}} class="btn btn-success my-2 my-sm-0" onClick={post} id="btnSave">  Save  </button>
                             {/* </form> */}
                         </td>
@@ -290,4 +333,4 @@ function Footer(){
     </footer>
     )
 }
-export default main;
+export default Container;
