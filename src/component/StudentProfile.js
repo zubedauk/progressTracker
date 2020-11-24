@@ -1,19 +1,21 @@
-//import React, { useState, useEffect } from "react";
-import React from 'react'
-//import ReactDOM from 'react-dom';
-import {Table,Progress,message, Button } from 'antd'
+import React, { useState, useEffect } from "react";
+import {Table,Progress,Input } from 'antd'
 //import profiledata from "./profiledata"
 import ViewProfile from './ViewProfile'
-const StudentProfile=()=>{
-    
-  //    const [newProfile, setNewProfile] = useState({
-	// "student_id": 1,
-	// "name": "student 1",
-	// "assignment": [ 3,8,9,7,7,8,5,7,9,7,0,8,6,5,8,6 ],
-	// "attendance": ["Late",	"Yes", "No", "Yes",	"Yes", "Yes", "Yes", "Yes",	"Yes", "Yes", "Yes", "Yes",	"Yes", "Yes", "Yes"],
-	// "email": "Student1@gmail.com"
-  // });
+const StudentProfile=({id})=>{
+  const [studentProfile, setStudentProfile ] = useState(null)  
+id=2;
+  useEffect(() => {
+    console.log("Fetching data from heroku");
 
+    fetch(
+      `https://ontrack-team3.herokuapp.com/profile/student/${id}`
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        setStudentProfile([data]);
+      });
+  }, []);
 //      useEffect(() => {
 //     fetch(`url/${profile}`)
 //       .then(res => res.json())
@@ -26,39 +28,8 @@ const StudentProfile=()=>{
 // console.log(newProfile.assignment.reduce((acc,curr) =>{if(curr>0) { return acc++}})
 // console.log(newProfile.assignment.reduce((acc,curr) => acc+curr,0))
 //const reducer = (acc,curr)=>acc + curr;
-//const studentprofile = () => {
-  const data = [
-  {
-    "student_id": 2,
-    "name": "Berhane",
-    "assignment": [8],
-    "attendance": [90],
-    "assignments_missing": [0],
-    "class_late": [14.81],
-    "email": "mail2berhane@gmail.com"
-}
-  // {
-	// "student_id": 2,
-	// "name": "Student 2",
-	// "assignment": [8], 
-	// "attendance": [99],
-	// "email": "Student2@gmail.com"
-  // },
-  // {
-	// "student_id": 3,
-	// "name": "Student 3",
-	// "assignment": [7],
-	// "attendance": [89],
-	// "email": "Student3@gmail.com"
-  // },
-  // {
-	// "student_id": 4,
-	// "name": "student 4",
-	// "assignment": [10],
-	// "attendance": [99],
-	// "email": "Student4@gmail.com"
-  // }
-]
+
+
   
   const columns = [
     {
@@ -112,7 +83,7 @@ const StudentProfile=()=>{
         '0%': '#108ee9',
         '50%': 'amber',
         '100%': '#87d068',
-      }} percent={element * 10} width={80} />
+      }} percent={(element*10).toFixed(2)} width={80} />
               
             );
           })}
@@ -126,11 +97,14 @@ const StudentProfile=()=>{
     },
     
   ];
-  return  <Table columns={columns} dataSource={data} />;
+  return <Table columns={columns} dataSource={studentProfile} />;
+};
+ 
+//return <TextArea rows={4} />;
 
   
 
-  };
+ // };
 
 
 //     if (newProfile) {
