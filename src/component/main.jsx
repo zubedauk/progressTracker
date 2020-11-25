@@ -6,14 +6,14 @@ function Container(){
     // https://ontrack-team3.herokuapp.com/students
     //https://progresstracer.glitch.me/students
     // https://ontrack-team3.herokuapp.com/students
-    const [urlMain,setURLMain]=useState('https://ontrack-team3.herokuapp.com/students')
+    //const [urlMain,setURLMain]=useState('https://ontrack-team3.herokuapp.com/students')
     const [urlSearch,setURLSearch]=useState(null)
    
     //////////function to addChange ApI according to search cretria
     function urlFunc(urlSearch){
         document.getElementById("main").innerHTML=""
         setURLSearch(urlSearch)
-
+        
     }
     
     /////////////////////////this function is used to make refresh data after new entry
@@ -34,7 +34,7 @@ function Container(){
         <div id="container">
         <Header urlFunc={urlFunc} />
         <hr></hr>
-        {urlMain && (<Main url={urlMain} cnt={urlMain} urlFunc={urlFunc} addFreshFunc={addFreshFunc} />)}
+        <Main url='https://ontrack-team3.herokuapp.com/students' cnt='https://ontrack-team3.herokuapp.com/students' urlFunc={urlFunc} addFreshFunc={addFreshFunc} />)
         {urlSearch && (<Main url={urlSearch} cnt={urlSearch} urlFunc={urlFunc} addFreshFunc={addFreshFunc} />)}
         {addChange && (<Main url={load} cnt={addChange} urlFunc={urlFunc} addFreshFunc={addFreshFunc}  /> )}
 
@@ -146,15 +146,15 @@ function Main(prop){
             })
             .then(function(db){
             
-                console.log(db);
+                //console.log(db);
                 setData(db);
-                console.log(data);
+                //console.log(data);
             })
             .then(function(error) {
                 console.log(error);
             });
         }
-    ,[prop.cnt])
+    ,[prop.cnt,prop.url])
 ////////////////////setAdd method is used to on/off the new entry div
 const [add,setAdd]=useState(null);
 function addCancelFunc(){
