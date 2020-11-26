@@ -114,6 +114,9 @@
     flex-direction: column;
 
 }
+#edit{
+    box-shadow: 5px 5px 10px;
+}
 #newEntry{
     box-shadow: 5px 5px 10px;
 }
