@@ -24,8 +24,14 @@
 
 }
 #login{
-    width:6rem;
-    height:3rem;
+    widows: 10rem;
+    height:5rem;
+    font-size: medium;
+    font-weight: bold;
+}
+#login img{
+    widows: 10rem;
+    height:5rem;
     font-size: medium;
     font-weight: bold;
 }
