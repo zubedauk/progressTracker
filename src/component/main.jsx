@@ -5,9 +5,11 @@ import "antd/dist/antd.css";
 import "../index.css";
 import PDtracker from "./PDtracker";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+// import Layout from "antd/lib/layout/layout";
 
 function main() {
   return (
+    // <Layout>
     <div id="container">
       <header id="header">
         <div id="logo-login">
@@ -50,6 +52,50 @@ function main() {
                 PD
               </Link>
             </nav>
+            <div id="search">
+              {/* class="nav-item active" */}
+              <li>
+                <a class="nav-link" href="www.google" id="home">
+                  Home <span class="sr-only">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <select name="location" id="location">
+                  <option value="London">Location</option>
+                  <option value="London">London</option>
+                  <option value="Birmingham">Birmingham</option>
+                  <option value="Machester">Machester</option>
+                </select>
+              </li>
+              <li class="nav-item">
+                <select name="class" id="class">
+                  <option value="Class1">Class</option>
+                  <option value="Class1">Class1</option>
+                  <option value="Class2">Class2</option>
+                  <option value="Class3">Class3</option>
+                </select>
+              </li>
+              <li>
+                <form class="form-inline my-2 my-lg-0" name="frmSearch">
+                  <input
+                    style={{ fontSize: "1.4rem", width: "10rem" }}
+                    class="form-control mr-sm-2"
+                    type="search"
+                    placeholder="Search"
+                    aria-label="Search"
+                  />
+                  <button
+                    style={{ fontSize: "1.4rem" }}
+                    class="btn btn-outline-success my-2 my-sm-0"
+                    type="submit"
+                    id="btnSearch"
+                  >
+                    Search
+                  </button>
+                </form>
+              </li>
+            </div>
+
             <Switch>
               <Route exact="true" path="/" component={main}>
                 <Main />
@@ -57,51 +103,9 @@ function main() {
               <Route path="/pdtracker" component={PDtracker}>
                 <PDtracker />
               </Route>
+             
             </Switch>
           </Router>
-          <div id="search">
-            {/* class="nav-item active" */}
-            <li>
-              <a class="nav-link" href="www.google" id="home">
-                Home <span class="sr-only">(current)</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <select name="location" id="location">
-                <option value="London">Location</option>
-                <option value="London">London</option>
-                <option value="Birmingham">Birmingham</option>
-                <option value="Machester">Machester</option>
-              </select>
-            </li>
-            <li class="nav-item">
-              <select name="class" id="class">
-                <option value="Class1">Class</option>
-                <option value="Class1">Class1</option>
-                <option value="Class2">Class2</option>
-                <option value="Class3">Class3</option>
-              </select>
-            </li>
-            <li>
-              <form class="form-inline my-2 my-lg-0" name="frmSearch">
-                <input
-                  style={{ fontSize: "1.4rem", width: "10rem" }}
-                  class="form-control mr-sm-2"
-                  type="search"
-                  placeholder="Search"
-                  aria-label="Search"
-                />
-                <button
-                  style={{ fontSize: "1.4rem" }}
-                  class="btn btn-outline-success my-2 my-sm-0"
-                  type="submit"
-                  id="btnSearch"
-                >
-                  Search
-                </button>
-              </form>
-            </li>
-          </div>
         </div>
         <div>
           <button type="button" class="btn btn-primary" id="login">
@@ -110,6 +114,7 @@ function main() {
         </div>
       </header>
     </div>
+    // </Layout>
   );
 }
 function Footer() {
