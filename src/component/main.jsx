@@ -69,7 +69,7 @@ function Header(prop){
                     <a href="www.google.com" class="btn btn-outline-success btnSize">Student</a>
                     <a href="www.google.com" class="btn btn-outline-success btnSize">Attendance</a>
                     <a href="www.google.com" class="btn btn-outline-success btnSize">Education</a>
-                    <a href="https://cyf-baby-name-picker-zubeda.netlify.app/" class="btn btn-outline-success btnSize">PD</a>
+                    <a href="https://cyf-baby-name-picker-zubeda.netlify.app" class="btn btn-outline-success btnSize">PD</a>
                 </nav>
                 <div  id="search">
                         <li >
@@ -192,13 +192,13 @@ return(
     <caption>List of users</caption>
     <thead>
         <tr>
-        <th scope="col" style={{fontSize:'1.2rem'}}>#</th>
-        <th scope="col" style={{fontSize:'1.2rem'}} >Name</th>
-        <th scope="col" style={{fontSize:'1.2rem'}}>Photo</th>
-        <th scope="col" style={{fontSize:'1.2rem'}}>Edu Buddy</th>
-        <th scope="col" style={{fontSize:'1.2rem'}}>PD Buddy</th>
-        <th scope="col" style={{fontSize:'1.2rem'}}>GitHub</th>
-        <th scope="col" style={{fontSize:'1.2rem'}}>English Test</th>
+        <th scope="col" style={{fontSize:'1.4rem'}}>#</th>
+        <th scope="col" style={{fontSize:'1.4rem'}} >Name</th>
+        <th scope="col" style={{fontSize:'1.4rem'}}>Photo</th>
+        <th scope="col" style={{fontSize:'1.4rem'}}>Edu Buddy</th>
+        <th scope="col" style={{fontSize:'1.4rem'}}>PD Buddy</th>
+        <th scope="col" style={{fontSize:'1.4rem'}}>GitHub</th>
+        <th scope="col" style={{fontSize:'1.4rem'}}>English Test</th>
         <th scope="col" style={{fontSize:'1.1rem',width:'11.2rem'}}>Language Support</th>
         <th scope="col"></th>
         <th scope="col"></th>
@@ -220,49 +220,49 @@ return(
         }
         function tLightFunc(val){
             if(val.toLowerCase()==="good"){
-                return <span style={{color:'orange',fontSize:'1.2rem',fontWeight:'bold',fontStyle:'italic'}}>Good</span>
+                return <span style={{color:'orange',fontSize:'1.4rem',fontWeight:'bold',fontStyle:'italic'}}>Good</span>
             }
             if(val.toLowerCase()==="excellent"){
-                return <span style={{color:'green',fontSize:'1.2rem',fontWeight:'bold',fontStyle:'italic'}}>Excellent</span>
+                return <span style={{color:'green',fontSize:'1.4rem',fontWeight:'bold',fontStyle:'italic'}}>Excellent</span>
             }
             if(val.toLowerCase()==="poor"){
-                return <span style={{color:'red',fontSize:'1.2rem',fontWeight:'bold',fontStyle:'italic'}}>Poor</span>
+                return <span style={{color:'red',fontSize:'1.4rem',fontWeight:'bold',fontStyle:'italic'}}>Poor</span>
             }
         }
         return(<>
             <tr id={obj.id} key={obj.id}>
                 <th scope="row" key={obj.id} value={obj.id}>{obj.id}</th>
-                <td style={{fontSize:'1.2rem'}} value={obj.name}>{obj.name}</td>
-                <td style={{fontSize:'1.2rem'}} value={obj.photo}>
+                <td style={{fontSize:'1.4rem'}} value={obj.name}>{obj.name}</td>
+                <td style={{fontSize:'1.4rem'}} value={obj.photo}>
                     {
                         testFunc(obj.photo) ? (<span style={{color:'green',fontSize:'2rem'}}>&#10004;</span>):(<span style={{color:'red',fontSize:'2rem'}}>&#10005;</span>)
                     }
                 </td>
-                <td style={{fontSize:'1.2rem'}} value={obj.pdBuddy}>{obj.pdBuddy}</td>
-                <td style={{fontSize:'1.2rem'}} value={obj.eduBuddy}>{obj.eduBuddy}</td>
-                <td  value={obj.gitHub}><a style={{fontSize:'1.2rem'}} href="gitHub.com">{obj.gitHub}</a> </td>
-                <td style={{fontSize:'1.2rem'}} value={obj.englishTest}>
+                <td style={{fontSize:'1.4rem'}} value={obj.pdBuddy}>{obj.pdBuddy}</td>
+                <td style={{fontSize:'1.4rem'}} value={obj.eduBuddy}>{obj.eduBuddy}</td>
+                <td  value={obj.gitHub}><a style={{fontSize:'1.4rem'}} href="gitHub.com">{obj.gitHub}</a> </td>
+                <td style={{fontSize:'1.4rem'}} value={obj.englishTest}>
                     {
                         tLightFunc(obj.englishTest)
                     }
                 </td>
-                <td style={{fontSize:'1.2rem',textAlign:'center'}} value={obj.languageSupport}>
+                <td style={{fontSize:'1.4rem',textAlign:'center'}} value={obj.languageSupport}>
                     {
                         testFunc(obj.languageSupport) ? (<span style={{color:'green',fontSize:'2rem'}}>&#10004;</span>):(<span style={{color:'red',fontSize:'2rem'}}>&#10005;</span>)
                     }
                 </td>
                 <td id="tdEdit">
-                    <button style={{fontSize:'1.2rem'}} class="btn btn-outline-success my-2 my-sm-0" type="submit" id="btnEdit" onClick={editFunc}>Edit</button>
+                    <button style={{fontSize:'1.4rem'}} class="btn btn-outline-success my-2 my-sm-0" type="submit" id="btnEdit" onClick={editFunc}>Edit</button>
                 </td>
                 <td id="tdDel">
-                    <button  style={{fontSize:'1.2rem',borderColor:'red'}} class="btn btn-outline-success my-2 my-sm-0" type="submit" id="btDel" onClick={delFunc}>X</button>
+                    <button  style={{fontSize:'1.4rem',borderColor:'red'}} class="btn btn-outline-success my-2 my-sm-0" type="submit" id="btDel" onClick={delFunc}>X</button>
                     
                 </td>
                 <td>
                     
                    
                     <a href="./component/StudentProfile.jsx">
-                        <button style={{fontSize:'1.2rem'}} class="btn btn-outline-success my-2 my-sm-0" type="submit" id="btnProfile">Profile</button>
+                        <button style={{fontSize:'1.4rem'}} class="btn btn-outline-success my-2 my-sm-0" type="submit" id="btnProfile">Profile</button>
                     </a>
                 </td>
             </tr>
@@ -365,51 +365,51 @@ function AddNew(prop){
                 <thead>
                     <tr>
                      
-                        <th scope="col" style={{fontSize:'1.2rem'}}>Name</th>
-                        <th scope="col" style={{fontSize:'1.2rem'}}>Photo</th>
-                        <th scope="col" style={{fontSize:'1.2rem'}}>Class</th>
-                        <th scope="col" style={{fontSize:'1.2rem'}}>Location</th>
-                        <th scope="col" style={{fontSize:'1.2rem'}}>Edu Buddy</th>
-                        <th scope="col" style={{fontSize:'1.2rem'}}>PD Buddy</th>
-                        <th scope="col" style={{fontSize:'1.2rem'}}>GitHub</th>
-                        <th scope="col" style={{fontSize:'1.2rem'}}>English Test</th>
-                        <th scope="col" style={{fontSize:'1.2rem'}}>Language Support</th>
+                        <th scope="col" style={{fontSize:'1.4rem'}}>Name</th>
+                        <th scope="col" style={{fontSize:'1.4rem'}}>Photo</th>
+                        <th scope="col" style={{fontSize:'1.4rem'}}>Class</th>
+                        <th scope="col" style={{fontSize:'1.4rem'}}>Location</th>
+                        <th scope="col" style={{fontSize:'1.4rem'}}>Edu Buddy</th>
+                        <th scope="col" style={{fontSize:'1.4rem'}}>PD Buddy</th>
+                        <th scope="col" style={{fontSize:'1.4rem'}}>GitHub</th>
+                        <th scope="col" style={{fontSize:'1.4rem'}}>English Test</th>
+                        <th scope="col" style={{fontSize:'1.1rem'}}>Language Support</th>
                         <th scope="col"></th>
                         <th scope="col"></th>
                     </tr>
                     </thead>  
                     <tbody>
                     <tr>
-                        <td style={{fontSize:'1.2rem'}}><input style={{width:'15rem'}} placeholder="Enter Name" type="text" name="txtName" id="txtName" value={name} onChange={function(e){setName(e.target.value)}} /></td>
-                        <td style={{fontSize:'1.2rem'}}>
+                        <td style={{fontSize:'1.4rem'}}><input style={{width:'15rem'}} placeholder="Enter Name" type="text" name="txtName" id="txtName" value={name} onChange={function(e){setName(e.target.value)}} /></td>
+                        <td style={{fontSize:'1.4rem'}}>
                             <select name="txtPhoto" onChange={function(e){setPhoto(e.target.value)}}>
-                                <option style={{fontSize:'1.2rem'}} value="yes">Yes</option>
-                                <option style={{fontSize:'1.2rem'}} value="No">No</option>
+                                <option style={{fontSize:'1.4rem'}} value="yes">Yes</option>
+                                <option style={{fontSize:'1.4rem'}} value="No">No</option>
                             </select>                        
                         </td>
-                        <td style={{fontSize:'1.2rem'}}><input style={{width:'10rem'}} placeholder="Enter Class" type="text" name="txtClassName" id="txtClassName" value={className} onChange={function(e){setClassName(e.target.value)}} /></td>
-                        <td style={{fontSize:'1.2rem'}}><input style={{width:'10rem'}} placeholder="Enter Location" type="text" name="txtLocation" id="txtLocation" value={location} onChange={function(e){setLocation(e.target.value)}} /></td>
+                        <td style={{fontSize:'1.4rem'}}><input style={{width:'10rem'}} placeholder="Enter Class" type="text" name="txtClassName" id="txtClassName" value={className} onChange={function(e){setClassName(e.target.value)}} /></td>
+                        <td style={{fontSize:'1.4rem'}}><input style={{width:'10rem'}} placeholder="Enter Location" type="text" name="txtLocation" id="txtLocation" value={location} onChange={function(e){setLocation(e.target.value)}} /></td>
 
-                        <td style={{fontSize:'1.2rem'}}><input style={{width:'10rem'}} type="text" placeholder="Enter Edu Buddy" name="txtEdu" value={edu} onChange={function(e){setEdu(e.target.value)}} /></td>
+                        <td style={{fontSize:'1.4rem'}}><input style={{width:'10rem'}} type="text" placeholder="Enter Edu Buddy" name="txtEdu" value={edu} onChange={function(e){setEdu(e.target.value)}} /></td>
                         <td><input style={{width:'10rem'}} type="text" name="txtPD" value={pd} placeholder="Enter PD Buddy" onChange={function(e){setPD(e.target.value)}} /></td>
                         <td style={{fontSize:'1.2rem'}}><input type="text" name="txtGitHub" placeholder="Enter GitHub ID" value={gitHub} onChange={function(e){setGitHub(e.target.value) }} /></td>
-                        <td style={{fontSize:'1.2rem'}}>
+                        <td style={{fontSize:'1.4rem'}}>
                             <select name="selectEnglishTest" onChange={function(e){setEnglish(e.target.value)}} >
-                                <option style={{fontSize:'1.2rem'}} value="Excellent">Excellent</option>
-                                <option style={{fontSize:'1.2rem'}} value="Good">Good</option>
-                                <option style={{fontSize:'1.2rem'}} value="Poor">Poor</option>
+                                <option style={{fontSize:'1.4rem'}} value="Excellent">Excellent</option>
+                                <option style={{fontSize:'1.4rem'}} value="Good">Good</option>
+                                <option style={{fontSize:'1.4rem'}} value="Poor">Poor</option>
                             </select>
                         </td>
-                        <td style={{fontSize:'1.2rem'}}>
+                        <td style={{fontSize:'1.4rem'}}>
                             <select name="selectLanguageSupport" onChange={function(e){setLanuageSupport(e.target.value)}}>
-                                <option style={{fontSize:'1.2rem'}} value="Yes">Yes</option>
-                                <option style={{fontSize:'1.2rem'}} value="No">No</option>
+                                <option style={{fontSize:'1.4rem'}} value="Yes">Yes</option>
+                                <option style={{fontSize:'1.4rem'}} value="No">No</option>
                             </select>
                         </td>
                         <td>
                             {/* <form method="post" action="https://progresstracker.glitch.me/students" class="form-inline my-2 my-lg-0" name="frmProfile"> */}
                                 
-                                <button style={{fontSize:'1.2rem'}} class="btn btn-success my-2 my-sm-0" onClick={post} id="btnSave">Save</button>
+                                <button style={{fontSize:'1.4rem'}} class="btn btn-success my-2 my-sm-0" onClick={post} id="btnSave">Save</button>
                             
                         </td>
                         
@@ -514,53 +514,53 @@ return(
             <thead>
                 <tr>
                  
-                    <th scope="col" style={{fontSize:'1.2rem'}}>Name</th>
-                    <th scope="col" style={{fontSize:'1.2rem'}}>Photo</th>
-                    <th scope="col" style={{fontSize:'1.2rem'}}>Edu Buddy</th>
-                    <th scope="col" style={{fontSize:'1.2rem'}}>PD Buddy</th>
-                    <th scope="col" style={{fontSize:'1.2rem'}}>GitHub</th>
-                    <th scope="col" style={{fontSize:'1.2rem'}}>English Test</th>
-                    <th scope="col" style={{fontSize:'1.2rem'}}>Language Support</th>
-                    <th scope="col" style={{fontSize:'1.2rem'}}>Class</th>
-                    <th scope="col" style={{fontSize:'1.2rem'}}>Location</th>
+                    <th scope="col" style={{fontSize:'1.4rem'}}>Name</th>
+                    <th scope="col" style={{fontSize:'1.4rem'}}>Photo</th>
+                    <th scope="col" style={{fontSize:'1.4rem'}}>Edu Buddy</th>
+                    <th scope="col" style={{fontSize:'1.4rem'}}>PD Buddy</th>
+                    <th scope="col" style={{fontSize:'1.4rem'}}>GitHub</th>
+                    <th scope="col" style={{fontSize:'1.4rem'}}>English Test</th>
+                    <th scope="col" style={{fontSize:'1.1rem'}}>Language Support</th>
+                    <th scope="col" style={{fontSize:'1.4rem'}}>Class</th>
+                    <th scope="col" style={{fontSize:'1.4rem'}}>Location</th>
                     <th scope="col"></th>
                     <th scope="col"></th>
                 </tr>
                 </thead>  
                 <tbody>
                 <tr>
-                    <td style={{fontSize:'1.2rem'}}><input style={{width:'15rem'}} placeholder="Enter Name" type="text" name="txtName" id="txtName" onChange={function(e){setName(e.target.value)}} />{document.getElementById(prop.editId).children[1].textContent}</td>
-                    <td style={{fontSize:'1.2rem'}}>
+                    <td style={{fontSize:'1.4rem'}}><input style={{width:'15rem'}} placeholder="Enter Name" type="text" name="txtName" id="txtName" onChange={function(e){setName(e.target.value)}} />{document.getElementById(prop.editId).children[1].textContent}</td>
+                    <td style={{fontSize:'1.4rem'}}>
                         <select name="txtPhoto" onChange={function(e){setPhoto(e.target.value)}} >
-                            <option style={{fontSize:'1.2rem'}} value="yes">Yes</option>
-                            <option style={{fontSize:'1.2rem'}} value="No">No</option>
+                            <option style={{fontSize:'1.4rem'}} value="yes">Yes</option>
+                            <option style={{fontSize:'1.4rem'}} value="No">No</option>
                         </select>                        
                     </td>
                    
-                    <td style={{fontSize:'1.2rem'}}><input style={{width:'10rem'}} type="text" placeholder="Enter Edu Buddy" name="txtEdu" onChange={function(e){setEdu(e.target.value)}} />{document.getElementById(prop.editId).children[3].textContent}</td>
+                    <td style={{fontSize:'1.4rem'}}><input style={{width:'10rem'}} type="text" placeholder="Enter Edu Buddy" name="txtEdu" onChange={function(e){setEdu(e.target.value)}} />{document.getElementById(prop.editId).children[3].textContent}</td>
                     <td><input style={{width:'10rem'}} type="text" name="txtPD" placeholder="Enter PD Buddy" onChange={function(e){setPD(e.target.value)}} />{document.getElementById(prop.editId).children[4].textContent}</td>
-                    <td style={{fontSize:'1.2rem'}}><input style={{width:'15rem'}} type="text" name="txtGitHub" placeholder="Enter GitHub ID" onChange={function(e){setGitHub(e.target.value) }} />{document.getElementById(prop.editId).children[5].textContent}</td>
-                    <td style={{fontSize:'1.2rem'}}>
+                    <td style={{fontSize:'1.4rem'}}><input style={{width:'15rem'}} type="text" name="txtGitHub" placeholder="Enter GitHub ID" onChange={function(e){setGitHub(e.target.value) }} />{document.getElementById(prop.editId).children[5].textContent}</td>
+                    <td style={{fontSize:'1.4rem'}}>
                         <select name="selectEnglishTest" onChange={function(e){setEnglish(e.target.value)}} >
-                            <option style={{fontSize:'1.2rem'}} value="Excellent">Excellent</option>
-                            <option style={{fontSize:'1.2rem'}} value="Good">Good</option>
-                            <option style={{fontSize:'1.2rem'}} value="Poor">Poor</option>
+                            <option style={{fontSize:'1.4rem'}} value="Excellent">Excellent</option>
+                            <option style={{fontSize:'1.4rem'}} value="Good">Good</option>
+                            <option style={{fontSize:'1.4rem'}} value="Poor">Poor</option>
                         </select>
                     </td>
-                    <td style={{fontSize:'1.2rem'}}>
+                    <td style={{fontSize:'1.4rem'}}>
                         <select name="selectLanguageSupport" onChange={function(e){setLanuageSupport(e.target.value)}}>
-                            <option style={{fontSize:'1.2rem'}} value="Yes">Yes</option>
-                            <option style={{fontSize:'1.2rem'}} value="No">No</option>
+                            <option style={{fontSize:'1.4rem'}} value="Yes">Yes</option>
+                            <option style={{fontSize:'1.4rem'}} value="No">No</option>
                         </select>
                     </td>
-                    <td style={{fontSize:'1.2rem'}}><input style={{width:'10rem'}} placeholder="Enter Class" type="text" name="txtClassName" id="txtClassName"  onChange={function(e){setClassName(e.target.value)}} /></td>
-                    <td style={{fontSize:'1.2rem'}}><input style={{width:'10rem'}} placeholder="Enter Location" type="text" name="txtLocation" id="txtLocation" onChange={function(e){setLocation(e.target.value)}} /></td>
+                    <td style={{fontSize:'1.4rem'}}><input style={{width:'10rem'}} placeholder="Enter Class" type="text" name="txtClassName" id="txtClassName"  onChange={function(e){setClassName(e.target.value)}} /></td>
+                    <td style={{fontSize:'1.4rem'}}><input style={{width:'10rem'}} placeholder="Enter Location" type="text" name="txtLocation" id="txtLocation" onChange={function(e){setLocation(e.target.value)}} /></td>
 
                     <td>
-                            <button style={{fontSize:'1.2rem'}} class="btn btn-success my-2 my-sm-0" onClick={edit} id="btnSave">Save</button>
+                            <button style={{fontSize:'1.4rem'}} class="btn btn-success my-2 my-sm-0" onClick={edit} id="btnSave">Save</button>
                     </td>
                     <td>
-                        <button  style={{fontSize:'1.2rem',color:'white',borderColor:'red',backgroundColor:'red',display:'flex'}} class="btn btn-outline-success my-2 my-sm-0" type="submit" id="btnCancel" onClick={prop.editCancelFunc}>X</button>
+                        <button  style={{fontSize:'1.4rem',color:'white',borderColor:'red',backgroundColor:'red',display:'flex'}} class="btn btn-outline-success my-2 my-sm-0" type="submit" id="btnCancel" onClick={prop.editCancelFunc}>X</button>
                     </td>
                     
                 </tr>
