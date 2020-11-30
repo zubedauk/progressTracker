@@ -466,7 +466,8 @@ return(
                 </thead>  
                 <tbody>
                 <tr>
-                    <td style={{fontSize:'1.4rem'}}><input value={document.getElementById(prop.editId).children[1].textContent} style={{width:'15rem'}} placeholder="Enter Name" type="text" name="txtName" id="txtName" onChange={function(e){setName(e.target.value)}} /><p contenteditable="true">This is an editable paragraph.</p></td>
+                    <td style={{fontSize:'1.4rem'}}><input style={{width:'10rem'}} type="text" placeholder="Enter name" name="txtName" onChange={function(e){setName(e.target.value)}} />{document.getElementById(prop.editId).children[1].textContent}</td>
+                    {/* <td style={{fontSize:'1.4rem'}}><input value={document.getElementById(prop.editId).children[1].textContent} style={{width:'15rem'}} placeholder="Enter Name" type="text" name="txtName" id="txtName" onChange={function(e){setName(e.target.value)}} /><p contenteditable="true">This is an editable paragraph.</p></td> */}
                     <td style={{fontSize:'1.4rem'}}>
                         <select name="txtPhoto" onChange={function(e){setPhoto(e.target.value)}} >
                             <option style={{fontSize:'1.4rem'}} value="yes">Yes</option>
